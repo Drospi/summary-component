@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const hanken = Hanken_Grotesk({ 
+  subsets: ['latin'],
+  weight: ['500', '700', '800'],
+  variable: '--font-hanken' // Esta variable conecta con el tailwind.config.js
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="es"
+      className={`${hanken.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bg-gray-100 flex items-center justify-center min-h-screen antialiased">{children}</body>
     </html>
   );
 }

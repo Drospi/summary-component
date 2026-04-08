@@ -2,22 +2,38 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+@theme {
+  /* Aquí definimos la fuente de Next.js */
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+
+  /* Aquí están todos los colores de tu diseño */
+  --color-light-slate-blue: #7857ff;
+  --color-light-royal-blue: #2e2be9;
+  --color-violet-blue: #4e21ca;
+  --color-persian-blue: rgba(36, 33, 202, 0);
+  --color-dark-gray-blue: #303b5a;
+  --color-light-lavender: #c8c7ff;
+  --color-light-red: #ff5757;
+  --color-light-red-bg: #fff6f5;
+  --color-orangey-yellow: #ffb01f;
+  --color-orangey-yellow-bg: #fffbf2;
+  --color-green-teal: #00bd91;
+  --color-green-teal-bg: #f2fbfa;
+  --color-cobalt-blue: #1125d4;
+  --color-cobalt-blue-bg: #f3f3fd;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ebebeb;
     --foreground: #ededed;
   }
 }
+
 
 body {
   background: var(--background);
